@@ -17,3 +17,8 @@ Future to do:
 - Unified interface for audio recording/playback for Windows, Android and Mac/iOS.
 
 
+Missing:
+
+- Documentation
+- Command line build scripts.
+- License

@@ -1,4 +1,4 @@
-AHCLIBCP: Crossplatform micro library
+AHCLIBCP: Crossplatform library
 ===
 
 Contains a number of classes and functions covering memory management, strings, encoding, networking, Android's OPENSLES, threading, events.

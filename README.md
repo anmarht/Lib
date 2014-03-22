@@ -7,8 +7,10 @@ I've converted this subset from the my 2008 Windows library and made it cross pl
 
 Tested on Windows, Linux (RHEL6), Mac OS 10.9, Android 4, iOS 7.
 
-Android Make file:
----
+Installation
+------------
+
+Android:
 
 LOCAL_PATH := $(call my-dir)
 

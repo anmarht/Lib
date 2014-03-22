@@ -12,31 +12,31 @@ Installation
 
 Android:
 
-LOCAL_PATH := $(call my-dir)
+	LOCAL_PATH := $(call my-dir)
 
-include $(CLEAR_VARS)
+	include $(CLEAR_VARS)
 
-LOCAL_MODULE    := mylib
-LOCAL_SRC_FILES :=  general.cpp 		\
-					textencoding.cpp 	\
-					str.cpp 			\
-					helpers.cpp 		\
-					netgeneral.cpp 		\
-					dns.cpp 			\
-					debugtools.cpp 		\
-					asocket.cpp 		\
-					thread.cpp			\
-					sync.cpp			\
-					md5.cpp				\
-					PacketBase.cpp		\
-					LightPacket.cpp		\
-					PacketEngine.cpp	\
-					opensles.cpp		\
-					lanbroadcaster.cpp	
+	LOCAL_MODULE    := mylib
+	LOCAL_SRC_FILES :=  general.cpp 		\
+						textencoding.cpp 	\
+						str.cpp 			\
+						helpers.cpp 		\
+						netgeneral.cpp 		\
+						dns.cpp 			\
+						debugtools.cpp 		\
+						asocket.cpp 		\
+						thread.cpp			\
+						sync.cpp			\
+						md5.cpp				\
+						PacketBase.cpp		\
+						LightPacket.cpp		\
+						PacketEngine.cpp	\
+						opensles.cpp		\
+						lanbroadcaster.cpp	
 
-LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog -lOpenSLES -ljnigraphics
+	LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog -lOpenSLES -ljnigraphics
 
-include $(BUILD_SHARED_LIBRARY)
+	include $(BUILD_SHARED_LIBRARY)
 
 Missing:
 ---

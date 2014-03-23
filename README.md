@@ -12,11 +12,11 @@ Notes before compiling
 
 Edit the lib.h file and modify the #define to match the target platform:
 
-for Windows, use #define _usewindows_
-for Linux, use #define _useposix_
-for Android, use #define _useposix_ and #define _useandroid_
-for mac os, use #define _useposix_
-for iOS, use #define _useposix_ and #define _useios_
+	for Windows, use #define _usewindows_
+	for Linux, use #define _useposix_
+	for Android, use #define _useposix_ and #define _useandroid_
+	for mac os, use #define _useposix_
+	for iOS, use #define _useposix_ and #define _useios_
 
 Creating a project
 ------------------

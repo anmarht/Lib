@@ -7,10 +7,44 @@ I've converted this subset from the my 2008 Windows library and made it cross pl
 
 Tested on Windows, Linux (RHEL6), Mac OS 10.9, Android 4, iOS 7.
 
-Installation
+Before compiling
+-----
+
+Edit the lib.h file and modify the #define to match the target platform:
+
+for Windows, use #define _usewindows_
+for Linux, use #define _useposix_
+for Android, use #define _useposix_ and #define _useandroid_
+for mac os, use #define _useposix_
+for iOS, use #define _useposix_ and #define _useios_
+
 ------------
 
-Android:
+- Windows:
+
+	* Create a project using Visual Studio.
+
+	* Add library files to the project.
+
+	* Compile and build.
+	
+- Mac OS / iOS
+
+	* Create a project using XCode.
+
+	* Add library files to the project.
+
+	* Compile and build.
+
+- Linux: I've used Eclipse to compile and build.
+
+	* Create a project using Eclipse.
+
+	* Add library files to the project.
+
+	* Compile and build.
+	
+Sample Android make file:
 
 	LOCAL_PATH := $(call my-dir)
 
@@ -38,11 +72,7 @@ Android:
 
 	include $(BUILD_SHARED_LIBRARY)
 
-Missing:
----
-- Documentation
-- Build notes.
-- License
+
 
 Classes that will be added later: 
 ---
@@ -54,3 +84,7 @@ Classes that will be added later:
 Future to do:
 ---
 - Unified interface for audio recording/playback for Windows, Android and Mac/iOS.
+
+Missing:
+---
+- Documentation

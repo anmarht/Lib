@@ -7,17 +7,6 @@ I've converted this subset from the my 2008 Windows library and made it cross pl
 
 Tested on Windows, Linux (RHEL6), Mac OS 10.9, Android 4, iOS 7.
 
-Notes before compiling
-----------------------
-
-Edit the lib.h file and modify the #define to match the target platform:
-
-	for Windows, use #define _usewindows_
-	for Linux, use #define _useposix_
-	for Android, use #define _useposix_ and #define _useandroid_
-	for mac os, use #define _useposix_
-	for iOS, use #define _useposix_ and #define _useios_
-
 Creating a project
 ------------------
 It's up to you to use the source code along with the executable or to create a static library for it.
@@ -90,6 +79,16 @@ Sample Android make file
 
 	include $(BUILD_SHARED_LIBRARY)
 
+Editing lib.h
+----------------------
+
+Edit the lib.h file and modify the #define to match the target platform:
+
+	for Windows, use #define _usewindows_
+	for Linux, use #define _useposix_
+	for Android, use #define _useposix_ and #define _useandroid_
+	for mac os, use #define _useposix_
+	for iOS, use #define _useposix_ and #define _useios_
 
 Classes that will be added later: 
 ---

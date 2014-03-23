@@ -7,8 +7,8 @@ I've converted this subset from the my 2008 Windows library and made it cross pl
 
 Tested on Windows, Linux (RHEL6), Mac OS 10.9, Android 4, iOS 7.
 
-Before compiling
------
+Notes before compiling
+----------------------
 
 Edit the lib.h file and modify the #define to match the target platform:
 
@@ -18,13 +18,17 @@ for Android, use #define _useposix_ and #define _useandroid_
 for mac os, use #define _useposix_
 for iOS, use #define _useposix_ and #define _useios_
 
-------------
+Creating a project
+------------------
+It's up to you to use the source code along with the executable or to create a static library for it.
 
 - Windows:
 
 	* Create a project using Visual Studio.
 
 	* Add library files to the project.
+	
+	* Edit lib.h (see notes below).
 
 	* Compile and build.
 	
@@ -33,6 +37,8 @@ for iOS, use #define _useposix_ and #define _useios_
 	* Create a project using XCode.
 
 	* Add library files to the project.
+	
+	* Edit lib.h (see notes below).
 
 	* Compile and build.
 
@@ -41,10 +47,22 @@ for iOS, use #define _useposix_ and #define _useios_
 	* Create a project using Eclipse.
 
 	* Add library files to the project.
+	
+	* Edit lib.h (see notes below).
 
 	* Compile and build.
 	
-Sample Android make file:
+- Native Android (Assuming you have the NDK environment setup correctly):
+
+	* Create a project using Eclipse.
+
+	* Add library files to the JNI folder of you native Android application.
+	
+	* Edit lib.h (see notes below).
+
+	* Compile and build.
+	
+Sample Android make file
 
 	LOCAL_PATH := $(call my-dir)
 
@@ -71,7 +89,6 @@ Sample Android make file:
 	LOCAL_LDLIBS := -L$(SYSROOT)/usr/lib -llog -lOpenSLES -ljnigraphics
 
 	include $(BUILD_SHARED_LIBRARY)
-
 
 
 Classes that will be added later: 

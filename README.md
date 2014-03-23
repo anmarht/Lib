@@ -9,7 +9,7 @@ Tested on Windows, Linux (RHEL6), Mac OS 10.9, Android 4, iOS 7.
 
 Creating a project
 ------------------
-It's up to you to use the source code along with the executable or to create a static library for it.
+It's up to you to use the source code to create an executable or a static library.
 
 - Windows:
 
